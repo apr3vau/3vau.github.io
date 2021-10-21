@@ -6,11 +6,21 @@
     <description>Recent content in technique on The 3rd Vast Affective Unity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 17 Oct 2021 23:51:43 +0800</lastBuildDate><atom:link href="http://ser3vau.club/tags/technique/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Oct 2021 09:57:51 +0800</lastBuildDate><atom:link href="http://ser3vau.club/tags/technique/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搞机日常</title>
+      <link>http://ser3vau.club/%E6%90%9E%E6%9C%BA%E6%97%A5%E5%B8%B8/</link>
+      <pubDate>Mon, 18 Oct 2021 09:57:51 +0800</pubDate>
+      
+      <guid>http://ser3vau.club/%E6%90%9E%E6%9C%BA%E6%97%A5%E5%B8%B8/</guid>
+      <description>这里记录了我探索过的那些奇奇怪怪的技术，看心情更新，希望能够帮到需要的人～
+ CPU Mac  </description>
+    </item>
+    
     <item>
       <title>cpu</title>
       <link>http://ser3vau.club/cpu/</link>
-      <pubDate>Sun, 17 Oct 2021 23:51:43 +0800</pubDate>
+      <pubDate>Mon, 18 Oct 2021 09:55:53 +0800</pubDate>
       
       <guid>http://ser3vau.club/cpu/</guid>
       <description>概述    cpu，电脑运算核心。
@@ -26,7 +36,7 @@ i7z
     <item>
       <title>Mac</title>
       <link>http://ser3vau.club/mac/</link>
-      <pubDate>Sun, 17 Oct 2021 23:51:43 +0800</pubDate>
+      <pubDate>Mon, 18 Oct 2021 09:55:53 +0800</pubDate>
       
       <guid>http://ser3vau.club/mac/</guid>
       <description>概述    虽然我很不喜欢苹果，但它质量过硬还是真的——无论硬件还是软件。
