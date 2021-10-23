@@ -1,0 +1,95 @@
+/* Self annotations */
+.jk-note {
+    position: absolute;
+    right: -30%;
+    width: 28%;
+    padding: 6px;
+    color: #666;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.jk-note::before {
+    content: '☜';
+    position: absolute;
+    top: -36px;
+    font-size: 32px;
+}
+
+.jk-essay {
+    position: relative;
+    display: block;
+    margin: 0.16rem auto;
+    padding: 0.2rem;
+    font-size: 0.15rem;
+    background-color: rgba(255, 255, 230, 0.6);
+    color: #003333;
+}
+.jk-essay::before {
+    content: '✍';
+    position: absolute;
+    font-size: 0.2rem;
+    right: 0;
+    top: -30px;
+}
+
+.jk-essay p {
+    margin-bottom: 0;
+}
+
+.jk-drawer {
+    display: block;
+    margin: 16px 0;
+}
+.jk-drawer .collapsible {
+    background-color: #899;
+    color: #fff;
+    cursor: pointer;
+    padding: 16px;
+}
+.jk-drawer .active,
+.jk-drawer .collapsible:hover {
+    background-color: #799;
+}
+.jk-drawer .content {
+    padding: 0 16px 16px 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f2f6;
+}
+
+.jk-rainbow {
+    color: #ccc;
+    background-image: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        yellow,
+        orange,
+        red,
+        orange,
+        yellow,
+        green,
+        yellow,
+        orange,
+        red
+    );
+    -webkit-background-clip: text;
+    animation: move 5s infinite;
+    color: transparent;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: -500px 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
