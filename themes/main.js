@@ -50,8 +50,6 @@ new Valine({
     el: '#vcomments',
     appId: '4faJ78FWdfcbn7QogmhcsctF-gzGzoHsz',
     appKey: 'ri0gTgQj8qx1JYgfK9Hew940',
-    avatar: 'wavatar', // robohash
-    placeholder: '没人理我很难受'
 })
 
 
