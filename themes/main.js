@@ -49,7 +49,7 @@ CONTENT.append(`
 new Valine({
     el: '#vcomments',
     appId: '4faJ78FWdfcbn7QogmhcsctF-gzGzoHsz',
-    appKey: 'ri0gTgQj8qx1JYgfK9Hew940',
+    appKey: 'ri0gTgQj8qx1JYgfK9Hew940'
 })
 
 
