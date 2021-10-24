@@ -19,21 +19,18 @@ export default {
         activeAll: false,
         pages: [
             'idea',
-            'diary',
-            'joker',
             'gtd',
             'story',
             'wiki',
-            'web-developer-roadmap',
-            'yinwang',
+            'journal',
         ],
     },
     // 加密的页面
-    // encrypt: {
-    //     password: '123456',
-    //     // 你的私有页面
-    //     pages: ['foo', 'bar'],
-    // },
+    encrypt: {
+        password: '123456',
+        // 你的私有页面
+        pages: ['foo', 'bar'],
+    },
     // // 不显示评论的页面，首页默认不显示
     // nonvaline: ['nav', '404']
 };
