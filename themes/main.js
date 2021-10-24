@@ -41,20 +41,20 @@ const TITLE = $('.title');
 const CONTENT = $('#content');
 
 // Valine comments.
-if (!isCurPage(userConfig.nonvaline) && !isHome()) {
-    CONTENT.append(`
+
+CONTENT.append(`
         <div style="margin-top: .64rem;"></div>
         <p style="font-family: 'segoe print'; font-size: .18rem; color: #ccc;">✒&nbsp; May you want to say :</p>
         <div id="vcomments" style="margin: 24px 0;"></div>
     `);
-    new Valine({
-        el: '#vcomments',
-        appId: '4faJ78FWdfcbn7QogmhcsctF-gzGzoHsz',
-        appKey: 'ri0gTgQj8qx1JYgfK9Hew940',
-        avatar: 'wavatar', // robohash
-        placeholder: '没人理我很难受'
-    })
-}
+new Valine({
+    el: '#vcomments',
+    appId: '4faJ78FWdfcbn7QogmhcsctF-gzGzoHsz',
+    appKey: 'ri0gTgQj8qx1JYgfK9Hew940',
+    avatar: 'wavatar', // robohash
+    placeholder: '没人理我很难受'
+})
+
 
 if (isMB) { $('#encrypt').hide() }
 initEncryptedPages(['joker', 'story', 'diary', 'plan'], 'jjkkk');
