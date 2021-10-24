@@ -44,7 +44,6 @@ const CONTENT = $('#content');
 
 CONTENT.append(`
         <div style="margin-top: .64rem;"></div>
-        <p style="font-family: 'segoe print'; font-size: .18rem; color: #ccc;">✒&nbsp; May you want to say :</p>
         <div id="vcomments" style="margin: 24px 0;"></div>
     `);
 new Valine({
