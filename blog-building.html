@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<!-- 2021-10-27 三 21:10 -->
+<!-- 2021-10-28 Thu 00:01 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>静态博客搭建引</title>
@@ -19,6 +19,16 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
+<li><a href="#orge645c27">想先试试？快速入门⬇</a>
+<ul>
+<li><a href="#org0ce67f7">一、注册GitHub</a></li>
+<li><a href="#orgee1c151">二、创建仓库</a></li>
+<li><a href="#org8655926">三、新建一个html文件</a></li>
+<li><a href="#orge9020cb">四、设置部署</a></li>
+<li><a href="#org472bf67">五、你站成了</a></li>
+</ul>
+</li>
+<li><a href="#org6baaf79">这个输入一串链接就能带我穿越的东西到底是啥？</a></li>
 <li><a href="#orgb249a8e">搭一个静态托管网站，到底是怎么一回事？</a></li>
 </ul>
 </div>
@@ -28,8 +38,183 @@
 </p>
 
 <p>
-所以这真的没什么难的。而且还不用花钱，完全白嫖。为什么不试试呢？
+所以这真的没什么难的。而且还不用花钱。所以为什么不试试呢？
 </p>
+
+<div id="outline-container-orge645c27" class="outline-2">
+<h2 id="orge645c27">想先试试？快速入门⬇</h2>
+<div class="outline-text-2" id="text-orge645c27">
+<p>
+如果你是一个经验主义者，或者你秉持实践出真知的观念，或是不确定自己能不能行，想先试试再说，再或者只是单纯讨厌看理论，就想先玩……
+</p>
+
+<p>
+那为什么不在一切开始之前，先花个两三分钟建一个自己的网站出来呢？
+</p>
+</div>
+
+<div id="outline-container-org0ce67f7" class="outline-3">
+<h3 id="org0ce67f7">一、注册GitHub</h3>
+<div class="outline-text-3" id="text-org0ce67f7">
+<p>
+前往 <a href="https://github.com">Github</a> 注册一个账号，点击右上角的 <code>Sign Up</code> 即可。
+</p>
+
+<p>
+GitHub作为作为全球最大的代码平台，我想应该没有人不知道吧？🤷‍♀️
+</p>
+
+<p>
+如果打不开，请上工具，或者多等一会儿，多刷新几下，再不行就换个时间（实测半夜GitHub速度最快😂）
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee1c151" class="outline-3">
+<h3 id="orgee1c151">二、创建仓库</h3>
+<div class="outline-text-3" id="text-orgee1c151">
+
+<div id="org8e069fd" class="figure">
+<p><img src="images/截屏2021-10-27 下午11.04.41.png" alt="截屏2021-10-27 下午11.04.41.png">
+</p>
+</div>
+
+<p>
+如图，进入新建仓库页面。
+</p>
+
+
+<div id="org0b6cc2f" class="figure">
+<p><img src="images/截屏2021-10-27 下午11.08.51.png" alt="截屏2021-10-27 下午11.08.51.png">
+</p>
+</div>
+
+<p>
+在上图的 <code>Repository name</code> 中填写 <code>&lt;你的用户名&gt;.github.io</code> ，我因为已经有一个同名仓库，所以出现了一些不该出现的提示……
+</p>
+
+<p>
+剩下的选项不用改，默认配置即可。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8655926" class="outline-3">
+<h3 id="org8655926">三、新建一个html文件</h3>
+<div class="outline-text-3" id="text-org8655926">
+
+<div id="org0f2c596" class="figure">
+<p><img src="images/截屏2021-10-27 下午11.32.56.png" alt="截屏2021-10-27 下午11.32.56.png">
+</p>
+</div>
+
+<p>
+找到这里，点击 <code>Create new file</code> ，进入编辑界面，将文件名填写为 <code>index.html</code> 。
+</p>
+
+<p>
+文件内容模版如下，双击代码框进入复制模式：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">  &lt;<span style="color: #ff79c6;">!DOCTYPE</span> html&gt;
+&lt;<span style="color: #50fa7b;">html</span>&gt;
+  &lt;<span style="color: #50fa7b;">head</span>&gt;
+    &lt;<span style="color: #50fa7b;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">&#32593;&#31449;&#26631;&#39064;&#65288;&#26174;&#31034;&#22312;&#26631;&#31614;&#26639;&#37324;&#37027;&#20010;&#65289;</span>&lt;/<span style="color: #50fa7b;">title</span>&gt;
+  &lt;/<span style="color: #50fa7b;">head</span>&gt;
+  &lt;<span style="color: #50fa7b;">body</span>&gt;
+  &lt;<span style="color: #50fa7b;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">&#22823;&#23383;&#26631;&#39064;&#65292;&#38543;&#20415;&#20889;&#28857;&#21861;</span>&lt;/<span style="color: #50fa7b;">h1</span>&gt;
+  &lt;<span style="color: #50fa7b;">p</span>&gt;&#23567;&#23383;&#27573;&#33853;&#65292;&#38543;&#20415;&#20889;&#28857;&#21861;&lt;/<span style="color: #50fa7b;">p</span>&gt;
+  &lt;/<span style="color: #50fa7b;">body</span>&gt;
+&lt;/<span style="color: #50fa7b;">html</span>&gt;
+</pre>
+</div>
+
+<p>
+修改后保存即可。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9020cb" class="outline-3">
+<h3 id="orge9020cb">四、设置部署</h3>
+<div class="outline-text-3" id="text-orge9020cb">
+<p>
+进入设置中的Pages项：
+<img src="images/截屏2021-10-27 下午11.33.28.png" alt="截屏2021-10-27 下午11.33.28.png">
+</p>
+
+<p>
+如此修改即可。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org472bf67" class="outline-3">
+<h3 id="org472bf67">五、你站成了</h3>
+<div class="outline-text-3" id="text-org472bf67">
+<p>
+稍等一分钟左右（GitHub需要反应一会儿），然后访问 <code>https://&lt;你的用户名&gt;.github.io</code> ，就能看到你的网页了。
+</p>
+
+<p>
+虽然它现在看上去很简陋，但美化它非常简单。你可以试着到<a href="https://github.com/3vau/3vau.github.io">我网站的仓库</a>，把仓库 <code>themes</code> 文件夹下的 <code>style.css</code> 复制到你的仓库里（不用建立文件夹，和 <code>index.html</code> 同级），然后在你 <code>index.html</code> 的 <code>&lt;/head&gt;</code> 前加入：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #50fa7b;">link</span> <span style="color: #ffc9e8;">rel</span>=<span style="color: #f1fa8c;">"stylesheet"</span> <span style="color: #ffc9e8;">href</span>=<span style="color: #f1fa8c;">"style.css"</span> <span style="color: #ffc9e8;">type</span>=<span style="color: #f1fa8c;">"text/css"</span>&gt;
+</pre>
+</div>
+
+<p>
+再刷新下试试？
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6baaf79" class="outline-2">
+<h2 id="org6baaf79">这个输入一串链接就能带我穿越的东西到底是啥？</h2>
+<div class="outline-text-2" id="text-org6baaf79">
+<p>
+网站到底是个什么东西？为什么我点一个神秘链接，或者输入一串神秘字符，就能访问一个新世界？
+</p>
+
+<p>
+其实访问一个网页，和打开一个word文档没什么区别。
+</p>
+
+<p>
+无非是把word软件换成一种叫做浏览器的玩意，再把要打开的文件扔在别人的电脑上——网盘的功能都比它强。
+</p>
+
+<p>
+平常我们访问一个网页，网页的地址栏会显示一串这样的东西：
+</p>
+<pre class="example">
+https://ser3vau.club/journal.html
+</pre>
+
+<p>
+这一串网址的用处，就是告诉你的浏览器，你要打开的玩意在哪。
+</p>
+
+<p>
+其中 <code>https://</code> 代表访问协议（学习技术知识的基操就是忽略那些你看不懂的东西）， <code>ser3vau.club</code> 是我网站的域名，它指向一个IP地址。
+</p>
+
+<p>
+IP地址就是我的服务器的位置，长得像 114.114.114.114 这样，域名就是它的一个好记的外号。
+</p>
+
+<p>
+“/”后面的那一串代表文件在我服务器里的位置，类似于你的文件在你C盘里的位置，比如 <code>https://ser3vau.club/images/wechat.jpg</code> 就代表我服务器根目录下（相当于你C盘里）的images文件夹下的wechat.jpg文件
+</p>
+
+<p>
+，也就相当于
+</p>
+</div>
+</div>
 
 <div id="outline-container-orgb249a8e" class="outline-2">
 <h2 id="orgb249a8e">搭一个静态托管网站，到底是怎么一回事？</h2>
@@ -37,7 +222,7 @@
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Rosario S.E.</p>
-<p class="date">Created: 2021-10-27 三 21:10</p>
+<p class="date">Created: 2021-10-28 Thu 00:01</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
