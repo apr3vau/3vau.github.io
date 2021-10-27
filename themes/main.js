@@ -192,11 +192,12 @@ $('.me .contact #bilibili').attr(
 
 // Customize page footer
 // -------------------------------------------
-$('.validation').html(
-    '<a href="http://beian.miit.gov.cn" target="_blank">' +
-    userconfig.icp +
-    '</a>'
-); // Update copyright.
+// $('.validation').html(
+//     '<a href="http://beian.miit.gov.cn" target="_blank">' +
+//     userconfig.icp +
+//     '</a>'
+// );
+// Update copyright.
 $('.timestamp-wrapper').parent().addClass('gtd-timestamp');
 $('#postamble .date')[1].innerText =
     'Updated: ' + $('#postamble .date')[1].innerText.substring(8);
@@ -286,7 +287,7 @@ if (isCurPage('nav')) {
         _tip = '';
 
     _tip =
-        _bmLen > 20 ? '（🔥太多了，赶快处理吧，亲！）' : '（😤状态还不错！）';
+        _bmLen > 10 ? '（🔥太多了，赶快处理吧，亲！）' : '（😤状态还不错！）';
     $('#content p').append(
         `<span style="float: right;"><progress value="${_bmLen}" max="100"></progress> ${_tip}${_bmLen} 条</span>`
     );
