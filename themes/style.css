@@ -639,7 +639,7 @@ td:last-child {
 /* Home page style */
 /* ////////////////////////////////////////// */
 .js-home-content {
-    background: url('../images/bg/bggirl.gif') no-repeat right;
+    background: url('../images/icon.png') no-repeat right;
 }
 
 .js-home-content table {

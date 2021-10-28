@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<!-- 2021-10-28 Thu 00:01 -->
+<!-- 2021-10-28 四 20:54 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>静态博客搭建引</title>
@@ -28,8 +28,8 @@
 <li><a href="#org472bf67">五、你站成了</a></li>
 </ul>
 </li>
-<li><a href="#org6baaf79">这个输入一串链接就能带我穿越的东西到底是啥？</a></li>
-<li><a href="#orgb249a8e">搭一个静态托管网站，到底是怎么一回事？</a></li>
+<li><a href="#orgb0b2f57">网站的概念——这个输入一串链接就能带我穿越的东西到底是啥？</a></li>
+<li><a href="#org2a9ceb2">网站的基本结构——我都需要些什么东西？</a></li>
 </ul>
 </div>
 </div>
@@ -74,7 +74,7 @@ GitHub作为作为全球最大的代码平台，我想应该没有人不知道�
 <h3 id="orgee1c151">二、创建仓库</h3>
 <div class="outline-text-3" id="text-orgee1c151">
 
-<div id="org8e069fd" class="figure">
+<div id="org60c285a" class="figure">
 <p><img src="images/截屏2021-10-27 下午11.04.41.png" alt="截屏2021-10-27 下午11.04.41.png">
 </p>
 </div>
@@ -84,7 +84,7 @@ GitHub作为作为全球最大的代码平台，我想应该没有人不知道�
 </p>
 
 
-<div id="org0b6cc2f" class="figure">
+<div id="org61edfb3" class="figure">
 <p><img src="images/截屏2021-10-27 下午11.08.51.png" alt="截屏2021-10-27 下午11.08.51.png">
 </p>
 </div>
@@ -103,7 +103,7 @@ GitHub作为作为全球最大的代码平台，我想应该没有人不知道�
 <h3 id="org8655926">三、新建一个html文件</h3>
 <div class="outline-text-3" id="text-org8655926">
 
-<div id="org0f2c596" class="figure">
+<div id="org21248ba" class="figure">
 <p><img src="images/截屏2021-10-27 下午11.32.56.png" alt="截屏2021-10-27 下午11.32.56.png">
 </p>
 </div>
@@ -172,19 +172,15 @@ GitHub作为作为全球最大的代码平台，我想应该没有人不知道�
 </div>
 </div>
 </div>
-<div id="outline-container-org6baaf79" class="outline-2">
-<h2 id="org6baaf79">这个输入一串链接就能带我穿越的东西到底是啥？</h2>
-<div class="outline-text-2" id="text-org6baaf79">
+<div id="outline-container-orgb0b2f57" class="outline-2">
+<h2 id="orgb0b2f57">网站的概念——这个输入一串链接就能带我穿越的东西到底是啥？</h2>
+<div class="outline-text-2" id="text-orgb0b2f57">
 <p>
 网站到底是个什么东西？为什么我点一个神秘链接，或者输入一串神秘字符，就能访问一个新世界？
 </p>
 
 <p>
-其实访问一个网页，和打开一个word文档没什么区别。
-</p>
-
-<p>
-无非是把word软件换成一种叫做浏览器的玩意，再把要打开的文件扔在别人的电脑上——网盘的功能都比它强。
+其实访问网页的本质就是打开一个文件。
 </p>
 
 <p>
@@ -195,7 +191,7 @@ https://ser3vau.club/journal.html
 </pre>
 
 <p>
-这一串网址的用处，就是告诉你的浏览器，你要打开的玩意在哪。
+这一串网址的用处，就是告诉你的浏览器，你要打开的文件在哪。
 </p>
 
 <p>
@@ -207,22 +203,26 @@ IP地址就是我的服务器的位置，长得像 114.114.114.114 这样，域�
 </p>
 
 <p>
-“/”后面的那一串代表文件在我服务器里的位置，类似于你的文件在你C盘里的位置，比如 <code>https://ser3vau.club/images/wechat.jpg</code> 就代表我服务器根目录下（相当于你C盘里）的images文件夹下的wechat.jpg文件
+“/”后面的那一串代表文件在我服务器里的位置，类似于你的文件在你C盘里的位置，比如 <code>https://ser3vau.club/images/wechat.jpg</code> 就代表我服务器根目录下（类似于你C盘里）的 <code>images</code> 文件夹下的 <code>wechat.jpg</code> 文件。访问这个网址，就相当于访问了我服务器里image下的wechat.png这张图片。你的浏览器会显示这张图片，就像电脑上的图片查看器一样。
 </p>
 
 <p>
-，也就相当于
+所以访问网站的过程其实就是一个打开别人电脑里的文件的过程。
+</p>
+
+<p>
+那搭建网站的方法也就简单明了了：无非就是找一台服务器，把你的文件扔上去，再给你的服务器取个名，就完活了。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb249a8e" class="outline-2">
-<h2 id="orgb249a8e">搭一个静态托管网站，到底是怎么一回事？</h2>
+<div id="outline-container-org2a9ceb2" class="outline-2">
+<h2 id="org2a9ceb2">网站的基本结构——我都需要些什么东西？</h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Rosario S.E.</p>
-<p class="date">Created: 2021-10-28 Thu 00:01</p>
+<p class="date">Created: 2021-10-28 四 20:54</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
