@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<!-- 2021-10-30 Sat 17:16 -->
+<!-- 2021-11-05 Fri 22:16 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mac使用综述</title>
@@ -25,6 +25,19 @@
 <li><a href="#org3727bf4">外观</a></li>
 <li><a href="#org348fec7">包管理</a></li>
 <li><a href="#org5bb9643">安装fcpx</a></li>
+<li><a href="#org90df957">Mac软件包列表</a>
+<ul>
+<li><a href="#orgb9a510e">brew</a>
+<ul>
+<li><a href="#org7230119">emacs-mac</a></li>
+<li><a href="#org696ffb4">sbcl（for Common Lisp）（卸载）</a></li>
+<li><a href="#org13985f5">roswell</a></li>
+</ul>
+</li>
+<li><a href="#org116b383">quicklisp</a></li>
+<li><a href="#org0eb8b34">roswell</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -55,7 +68,7 @@ macOS把ctrl和meta键的功能拆开混合了，其中复制粘贴、撤销重�
 </p>
 
 
-<div id="orgbc360d3" class="figure">
+<div id="org8ce1248" class="figure">
 <p><img src="images/屏幕快照 2021-10-17 下午11.08.28.png" alt="屏幕快照 2021-10-17 下午11.08.28.png">
 </p>
 </div>
@@ -93,7 +106,7 @@ Mojave的动态壁纸做的也很不错，相比Windows上的Wallpaper Engine，
 <li><p>
 要指定make时所用的CPU核心数，需要设置 HOMEBREW<sub>MAKE</sub><sub>JOBS</sub> 变量，如我在安装emacs-mac时使用的就是：
 </p>
-<div class="bash" id="org5c1384f">
+<div class="bash" id="orgada52d2">
 <p>
 HOMEBREW<sub>MAKE</sub><sub>JOBS</sub>=4 brew install emacs-mac &#x2013;with-modules
 </p>
@@ -123,7 +136,7 @@ HOMEBREW<sub>MAKE</sub><sub>JOBS</sub>=4 brew install emacs-mac &#x2013;with-mod
 <ol class="org-ol">
 <li>打开信任所有来源的应用，Sierra以上的版本就不支持在GUI下直接开启了，需要使用命令：</li>
 </ol>
-<div class="bash" id="org2b1c606">
+<div class="bash" id="org2e3e2c9">
 <p>
 sudo spctl &#x2013;master-disable
 </p>
@@ -136,7 +149,7 @@ sudo spctl &#x2013;master-disable
 <ol class="org-ol">
 <li>Mac系统在启动时会校验软件，破解软件没有签名，是通不过校验的，需要用命令：</li>
 </ol>
-<div class="bash" id="orge9efd6f">
+<div class="bash" id="org7504e66">
 <p>
 sudo xattr -d com.apple.quarantine /Applications/Final\ Cut\ Pro.app
 </p>
@@ -151,10 +164,64 @@ sudo xattr -d com.apple.quarantine /Applications/Final\ Cut\ Pro.app
 </p>
 </div>
 </div>
+<div id="outline-container-org90df957" class="outline-2">
+<h2 id="org90df957">Mac软件包列表</h2>
+<div class="outline-text-2" id="text-org90df957">
+</div>
+<div id="outline-container-orgb9a510e" class="outline-3">
+<h3 id="orgb9a510e">brew</h3>
+<div class="outline-text-3" id="text-orgb9a510e">
+</div>
+<div id="outline-container-org7230119" class="outline-4">
+<h4 id="org7230119">emacs-mac</h4>
+<div class="outline-text-4" id="text-org7230119">
+<dl class="org-dl">
+<dt>安装命令</dt><dd>HOMEBREW<sub>MAKEJOBS</sub>=4 brew install emacs-mac &#x2013;with-modules &#x2013;with-natural-title-bar &#x2013;with-rsvg</dd>
+<dt>依赖</dt><dd>m4, autoconf, automake, ca-certificates, gmp, bdw-gc, libffi, libtool, libunistring, pkg-config, readline, guile, gettext, libidn2, libtasn1, nettle, p11-kit, openssl@1.1, libevent, libnghttp2, unbound, gnutls, libpng, freetype, fontconfig, pcre, gdbm, mpdecimal, sqlite, xz, python@3.9, glib, libpthread-stubs, xorgproto, libxau, libxdmcp, libxcb, libx11, libxext, libxrender, lzo, pixman, cairo, jpeg, libtiff, gdk-pixbuf, fribidi, gobject-introspection, graphite2, icu4c, harfbuzz, pango, librsvg, texinfo, jansson, libxml2</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org696ffb4" class="outline-4">
+<h4 id="org696ffb4">sbcl（for Common Lisp）（卸载）</h4>
+<div class="outline-text-4" id="text-org696ffb4">
+<dl class="org-dl">
+<dt>安装命令</dt><dd>brew install sbcl</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org13985f5" class="outline-4">
+<h4 id="org13985f5">roswell</h4>
+<div class="outline-text-4" id="text-org13985f5">
+<dl class="org-dl">
+<dt>安装命令</dt><dd>brew install roswell</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-org116b383" class="outline-3">
+<h3 id="org116b383">quicklisp</h3>
+<div class="outline-text-3" id="text-org116b383">
+<ul class="org-ul">
+<li>cl-fad</li>
+<li>trivial-file-size</li>
+<li>osicat</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0eb8b34" class="outline-3">
+<h3 id="org0eb8b34">roswell</h3>
+<div class="outline-text-3" id="text-org0eb8b34">
+<ul class="org-ul">
+<li>trivial-file-size</li>
+<li>osicat</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Rosario S.E.</p>
-<p class="date">Created: 2021-10-30 Sat 17:16</p>
+<p class="date">Created: 2021-11-05 Fri 22:16</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

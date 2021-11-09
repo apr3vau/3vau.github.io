@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<!-- 2021-11-08 Mon 22:56 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&lrm;</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rosario S.E.">
+<link rel="shortcut icon" href="themes/favicon.ico" type="image/x-icon" />
+           <link rel="stylesheet" href="themes/style.css" type="text/css"  />
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+           <script type="module" src="themes/main.js" defer></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org392f853">Common Lisp学习</a>
+<ul>
+<li><a href="#org4c476ed">基础语法</a>
+<ul>
+<li><a href="#orgb44d7e1">format格式字符串</a></li>
+<li><a href="#orgef8cce9">文件名操作（pathspec/namestring/pathname）</a></li>
+</ul>
+</li>
+<li><a href="#org36791f6">quicklisp Common Lisp包管理器</a></li>
+<li><a href="#orgfb814a6">cl-fad</a></li>
+<li><a href="#org0984b3d">osicat</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org392f853" class="outline-2">
+<h2 id="org392f853">Common Lisp学习</h2>
+<div class="outline-text-2" id="text-org392f853">
+</div>
+<div id="outline-container-org4c476ed" class="outline-3">
+<h3 id="org4c476ed">基础语法</h3>
+<div class="outline-text-3" id="text-org4c476ed">
+<dl class="org-dl">
+<dt>format</dt><dd>输出</dd>
+<dt>list</dt><dd>创建列表</dd>
+<dt>defvar</dt><dd>创建变量</dd>
+<dt>setf</dt><dd>给变量赋值或创建变量（可以一次传入多对）</dd>
+<dt>let</dt><dd>列表的一个元素创建局部变量，计算第二个元素的表达式</dd>
+<dt>progn</dt><dd>计算内部所有表达式元素</dd>
+<dt>car</dt><dd>取出列表第一个元素</dd>
+<dt>cdr</dt><dd>取出列表除第一个外的所有元素</dd>
+<dt>listp</dt><dd>判断是否为列表</dd>
+<dt>numberp</dt><dd>判断是否为数字</dd>
+<dt>if</dt><dd>第一个元素是条件，第二个元素是if计算内容，第三个元素是else计算内容</dd>
+<dt>eql</dt><dd>判断两个元素是否相等</dd>
+<dt>cons</dt><dd>把第一个元素加入第二个元素的列表中</dd>
+<dt>remove</dt><dd>把第一个元素从列表（第二个列表）中移除</dd>
+<dt>'</dt><dd>原封不动返回其元素</dd>
+<dt>#'</dt><dd>后带函数，返回其函数本身</dd>
+<dt>apply</dt><dd>返回把函数（第一个元素）作用到列表上的计算结果，第一个元素是函数本身，第二个元素是列表</dd>
+<dt>read</dt><dd>读取并返回读取到的值</dd>
+<dt>defun</dt><dd>定义函数</dd>
+<dt>lambda</dt><dd>没有名字，不用单出来的函数</dd>
+<dt>（概念）plist</dt><dd>给list里的每个项取一个名字 (list :a 1 :b 2)</dd>
+<dt>getf</dt><dd>取出plist里的元素，第一个元素是plist，第二个元素是元素名</dd>
+<dt>y-or-n-p</dt><dd>让用户输入y或n，一个字符串元素是提示内容</dd>
+<dt>do</dt><dd>条件循环</dd>
+<dt>loop</dt><dd>循环，通过(return)退出</dd>
+</dl>
+</div>
+<div id="outline-container-orgb44d7e1" class="outline-4">
+<h4 id="orgb44d7e1">format格式字符串</h4>
+<div class="outline-text-4" id="text-orgb44d7e1">
+<dl class="org-dl">
+<dt>~a</dt><dd>占位符，把后面的一个元素输出出去</dd>
+<dt>~t</dt><dd>调格式用，移动光标位置</dd>
+<dt>~r</dt><dd>把数字转为英语读法</dd>
+<dt>~v</dt><dd><p>
+可用于转义format格式符中的数字，效果如下：
+</p>
+<div class="org-src-container">
+<pre class="src src-common-lisp">CL-USER&gt; <span style="color: #3c98e0;">(</span>format nil <span style="color: #93a61a;">"~40:@&lt;~A~&gt;"</span> <span style="color: #93a61a;">"==================&#20320;&#22909;=================="</span><span style="color: #3c98e0;">)</span>
+<span style="color: #93a61a;">" ==================&#20320;&#22909;================== "</span>
+CL-USER&gt; <span style="color: #3c98e0;">(</span>format nil <span style="color: #93a61a;">"~v:@&lt;~A~&gt;"</span> 50 <span style="color: #93a61a;">"==================&#20320;&#22909;=================="</span><span style="color: #3c98e0;">)</span>
+<span style="color: #93a61a;">"      ==================&#20320;&#22909;==================      "</span>
+</pre>
+</div></dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgef8cce9" class="outline-4">
+<h4 id="orgef8cce9">文件名操作（pathspec/namestring/pathname）</h4>
+<div class="outline-text-4" id="text-orgef8cce9">
+<dl class="org-dl">
+<dt>概念</dt><dd>pathspec和namestring含义相同，都指的是一个字符串格式的路径，例如"~/Desktop/rosa"
+而pathname则是lisp用于操作文件时使用的文件名格式，会在pathspec前加"#P"，如#P"~/Desktop/rosa"</dd>
+<dt>(pathname &lt;namestring&gt;)</dt><dd>namestring转pathname</dd>
+<dt>(namestring &lt;pathname&gt;)</dt><dd>pathname转namestring</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-org36791f6" class="outline-3">
+<h3 id="org36791f6">quicklisp Common Lisp包管理器</h3>
+<div class="outline-text-3" id="text-org36791f6">
+<dl class="org-dl">
+<dt>加载包</dt><dd>(ql:quickload "包名")</dd>
+<dt>卸载包（从本地）</dt><dd>(ql:uninstall "包名")</dd>
+<dt>找包</dt><dd>(ql:system-apropos "包名")</dd>
+<dt>使用某个包内的函数</dt><dd>(包名:函数)</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgfb814a6" class="outline-3">
+<h3 id="orgfb814a6">cl-fad</h3>
+<div class="outline-text-3" id="text-orgfb814a6">
+<dl class="org-dl">
+<dt>list-directory</dt><dd>一个字符串元素为文件夹，返回这个文件夹下所有内容的列表</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org0984b3d" class="outline-3">
+<h3 id="org0984b3d">osicat</h3>
+<div class="outline-text-3" id="text-org0984b3d">
+<p>
+实现一些系统posix功能
+</p>
+<dl class="org-dl">
+<dt>osicat-posix-stat-*</dt><dd>查看文件的某项posix信息</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rosario S.E.</p>
+<p class="date">Created: 2021-11-08 Mon 22:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
