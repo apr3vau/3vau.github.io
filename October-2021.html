@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<!-- 2021-11-21 Sun 01:37 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&lrm;</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rosario S.E.">
+<link rel="shortcut icon" href="themes/favicon.ico" type="image/x-icon" />
+           <link rel="stylesheet" href="themes/style.css" type="text/css"  />
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+           <script type="module" src="themes/main.js" defer></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org61df2d4">Sunday, 10/31/2021</a>
+<ul>
+<li><a href="#org8ee2691">21:53 org-journal成功安装啦！&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tech">tech</span></span></a></li>
+<li><a href="#orga4e48df">23:07 想找一个理想的emacs中文字体好难&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tech">tech</span></span></a></li>
+<li><a href="#org1ee7db2">23:19 解决emacs符号部分乱码问题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tech">tech</span></span></a></li>
+<li><a href="#org2a13da6">23:20 journal tag规范&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tech">tech</span>&#xa0;<span class="R">R</span></span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org61df2d4" class="outline-2">
+<h2 id="org61df2d4">Sunday, 10/31/2021</h2>
+<div class="outline-text-2" id="text-org61df2d4">
+</div>
+<div id="outline-container-org8ee2691" class="outline-3">
+<h3 id="org8ee2691">21:53 org-journal成功安装啦！&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tech">tech</span></span></h3>
+<div class="outline-text-3" id="text-org8ee2691">
+<p>
+org-journal成功安装！初始配置是：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8AC6F2;">(</span><span style="color: #8AC6F2;">setq</span> <span style="color: #BF93C3;">org-journal-dir</span> <span style="color: #86B187;">"~/Desktop/rosa/orgs/journal/"</span><span style="color: #8AC6F2;">)</span>
+<span style="color: #8AC6F2;">(</span><span style="color: #8AC6F2;">setq</span> <span style="color: #BF93C3;">org-journal-file-type</span> 'weekly<span style="color: #8AC6F2;">)</span>
+</pre>
+</div>
+
+<p>
+追加配置：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8AC6F2;">(</span><span style="color: #8AC6F2;">setq</span> <span style="color: #BF93C3;">org-journal-find-file</span> '<span style="color: #EA9847;">find-file</span><span style="color: #8AC6F2;">)</span>
+</pre>
+</div>
+
+<p>
+以取消窗口分割。
+</p>
+
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-11-01 Mon&gt;</span></span>追加：还是按月记适合我：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8AC6F2;">(</span><span style="color: #8AC6F2;">setq</span> <span style="color: #BF93C3;">org-journal-file-type</span> 'weekly<span style="color: #8AC6F2;">)</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga4e48df" class="outline-3">
+<h3 id="orga4e48df">23:07 想找一个理想的emacs中文字体好难&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tech">tech</span></span></h3>
+<div class="outline-text-3" id="text-orga4e48df">
+<p>
+我想要一个不用单独设置就能做到在emacs下和英文自然对齐的宋体，但怎么样也找不到……😭
+唯一找到的是一款做到了自然对齐的黑体：<a href="https://github.com/be5invis/Sarasa-Gothic">更纱黑体</a>，可惜没有宋体版😭
+</p>
+</div>
+</div>
+<div id="outline-container-org1ee7db2" class="outline-3">
+<h3 id="org1ee7db2">23:19 解决emacs符号部分乱码问题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tech">tech</span></span></h3>
+<div class="outline-text-3" id="text-org1ee7db2">
+<p>
+如<a href="https://seagle0128.github.io/.emacs.d/">Centaur Emacs教程</a>FAQ第一条，安装<a href="https://dn-works.com/wp-content/uploads/2020/UFAS-Fonts/Symbola.zip">Symbola</a>字体
+</p>
+</div>
+</div>
+<div id="outline-container-org2a13da6" class="outline-3">
+<h3 id="org2a13da6">23:20 journal tag规范&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tech">tech</span>&#xa0;<span class="R">R</span></span></h3>
+<div class="outline-text-3" id="text-org2a13da6">
+<ul class="org-ul">
+<li>为每个journal打tag</li>
+<li>英文tag即可</li>
+<li>tag为内容所涉及的方面，而非内容的“属性”，“feeling”一类的tag是不需要的</li>
+<li>重要的、具备高再读价值的日志打上“R”tag</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rosario S.E.</p>
+<p class="date">Created: 2021-11-21 Sun 01:37</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
