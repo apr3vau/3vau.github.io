@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<!-- 2021-11-08 Mon 22:56 -->
+<!-- 2021-11-21 Sun 01:30 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>&lrm;</title>
@@ -18,29 +18,29 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org392f853">Common Lisp学习</a>
+<li><a href="#org110f3c6">Common Lisp学习</a>
 <ul>
-<li><a href="#org4c476ed">基础语法</a>
+<li><a href="#org4279795">基础语法</a>
 <ul>
-<li><a href="#orgb44d7e1">format格式字符串</a></li>
-<li><a href="#orgef8cce9">文件名操作（pathspec/namestring/pathname）</a></li>
+<li><a href="#orgf23f17a">format格式字符串</a></li>
+<li><a href="#org8d47e54">文件名操作（pathspec/namestring/pathname）</a></li>
 </ul>
 </li>
-<li><a href="#org36791f6">quicklisp Common Lisp包管理器</a></li>
-<li><a href="#orgfb814a6">cl-fad</a></li>
-<li><a href="#org0984b3d">osicat</a></li>
+<li><a href="#org61608da">quicklisp Common Lisp包管理器</a></li>
+<li><a href="#org31901ac">cl-fad</a></li>
+<li><a href="#orgc452709">osicat</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org392f853" class="outline-2">
-<h2 id="org392f853">Common Lisp学习</h2>
-<div class="outline-text-2" id="text-org392f853">
+<div id="outline-container-org110f3c6" class="outline-2">
+<h2 id="org110f3c6">Common Lisp学习</h2>
+<div class="outline-text-2" id="text-org110f3c6">
 </div>
-<div id="outline-container-org4c476ed" class="outline-3">
-<h3 id="org4c476ed">基础语法</h3>
-<div class="outline-text-3" id="text-org4c476ed">
+<div id="outline-container-org4279795" class="outline-3">
+<h3 id="org4279795">基础语法</h3>
+<div class="outline-text-3" id="text-org4279795">
 <dl class="org-dl">
 <dt>format</dt><dd>输出</dd>
 <dt>list</dt><dd>创建列表</dd>
@@ -67,31 +67,24 @@
 <dt>y-or-n-p</dt><dd>让用户输入y或n，一个字符串元素是提示内容</dd>
 <dt>do</dt><dd>条件循环</dd>
 <dt>loop</dt><dd>循环，通过(return)退出</dd>
+<dt>make-hash-table</dt><dd>创建哈希表</dd>
+<dt>gethash</dt><dd>获取表中的哈希值</dd>
 </dl>
 </div>
-<div id="outline-container-orgb44d7e1" class="outline-4">
-<h4 id="orgb44d7e1">format格式字符串</h4>
-<div class="outline-text-4" id="text-orgb44d7e1">
+<div id="outline-container-orgf23f17a" class="outline-4">
+<h4 id="orgf23f17a">format格式字符串</h4>
+<div class="outline-text-4" id="text-orgf23f17a">
 <dl class="org-dl">
 <dt>~a</dt><dd>占位符，把后面的一个元素输出出去</dd>
 <dt>~t</dt><dd>调格式用，移动光标位置</dd>
 <dt>~r</dt><dd>把数字转为英语读法</dd>
-<dt>~v</dt><dd><p>
-可用于转义format格式符中的数字，效果如下：
-</p>
-<div class="org-src-container">
-<pre class="src src-common-lisp">CL-USER&gt; <span style="color: #3c98e0;">(</span>format nil <span style="color: #93a61a;">"~40:@&lt;~A~&gt;"</span> <span style="color: #93a61a;">"==================&#20320;&#22909;=================="</span><span style="color: #3c98e0;">)</span>
-<span style="color: #93a61a;">" ==================&#20320;&#22909;================== "</span>
-CL-USER&gt; <span style="color: #3c98e0;">(</span>format nil <span style="color: #93a61a;">"~v:@&lt;~A~&gt;"</span> 50 <span style="color: #93a61a;">"==================&#20320;&#22909;=================="</span><span style="color: #3c98e0;">)</span>
-<span style="color: #93a61a;">"      ==================&#20320;&#22909;==================      "</span>
-</pre>
-</div></dd>
+<dt>~v</dt><dd>可用于转义format格式符中的数字</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgef8cce9" class="outline-4">
-<h4 id="orgef8cce9">文件名操作（pathspec/namestring/pathname）</h4>
-<div class="outline-text-4" id="text-orgef8cce9">
+<div id="outline-container-org8d47e54" class="outline-4">
+<h4 id="org8d47e54">文件名操作（pathspec/namestring/pathname）</h4>
+<div class="outline-text-4" id="text-org8d47e54">
 <dl class="org-dl">
 <dt>概念</dt><dd>pathspec和namestring含义相同，都指的是一个字符串格式的路径，例如"~/Desktop/rosa"
 而pathname则是lisp用于操作文件时使用的文件名格式，会在pathspec前加"#P"，如#P"~/Desktop/rosa"</dd>
@@ -101,9 +94,9 @@ CL-USER&gt; <span style="color: #3c98e0;">(</span>format nil <span style="color:
 </div>
 </div>
 </div>
-<div id="outline-container-org36791f6" class="outline-3">
-<h3 id="org36791f6">quicklisp Common Lisp包管理器</h3>
-<div class="outline-text-3" id="text-org36791f6">
+<div id="outline-container-org61608da" class="outline-3">
+<h3 id="org61608da">quicklisp Common Lisp包管理器</h3>
+<div class="outline-text-3" id="text-org61608da">
 <dl class="org-dl">
 <dt>加载包</dt><dd>(ql:quickload "包名")</dd>
 <dt>卸载包（从本地）</dt><dd>(ql:uninstall "包名")</dd>
@@ -112,17 +105,17 @@ CL-USER&gt; <span style="color: #3c98e0;">(</span>format nil <span style="color:
 </dl>
 </div>
 </div>
-<div id="outline-container-orgfb814a6" class="outline-3">
-<h3 id="orgfb814a6">cl-fad</h3>
-<div class="outline-text-3" id="text-orgfb814a6">
+<div id="outline-container-org31901ac" class="outline-3">
+<h3 id="org31901ac">cl-fad</h3>
+<div class="outline-text-3" id="text-org31901ac">
 <dl class="org-dl">
 <dt>list-directory</dt><dd>一个字符串元素为文件夹，返回这个文件夹下所有内容的列表</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org0984b3d" class="outline-3">
-<h3 id="org0984b3d">osicat</h3>
-<div class="outline-text-3" id="text-org0984b3d">
+<div id="outline-container-orgc452709" class="outline-3">
+<h3 id="orgc452709">osicat</h3>
+<div class="outline-text-3" id="text-orgc452709">
 <p>
 实现一些系统posix功能
 </p>
@@ -135,7 +128,7 @@ CL-USER&gt; <span style="color: #3c98e0;">(</span>format nil <span style="color:
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Rosario S.E.</p>
-<p class="date">Created: 2021-11-08 Mon 22:56</p>
+<p class="date">Created: 2021-11-21 Sun 01:30</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

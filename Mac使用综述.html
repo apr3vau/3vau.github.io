@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<!-- 2021-11-05 Fri 22:16 -->
+<!-- 2021-11-21 Sun 01:30 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mac使用综述</title>
@@ -19,39 +19,42 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9363782">概述</a></li>
-<li><a href="#org9666585">按键绑定</a></li>
-<li><a href="#orgc3c4a7e">续航</a></li>
-<li><a href="#org3727bf4">外观</a></li>
-<li><a href="#org348fec7">包管理</a></li>
-<li><a href="#org5bb9643">安装fcpx</a></li>
-<li><a href="#org90df957">Mac软件包列表</a>
+<li><a href="#org5f5aff7">概述</a></li>
+<li><a href="#org8ea025a">按键绑定</a></li>
+<li><a href="#org4a89eb8">续航</a></li>
+<li><a href="#org037be15">外观</a></li>
+<li><a href="#org80e7fc6">包管理</a></li>
+<li><a href="#orge868880">安装fcpx</a></li>
+<li><a href="#orgb2ea1ac">Mac软件包列表</a>
 <ul>
-<li><a href="#orgb9a510e">brew</a>
+<li><a href="#orgec7fb53">brew</a>
 <ul>
-<li><a href="#org7230119">emacs-mac</a></li>
-<li><a href="#org696ffb4">sbcl（for Common Lisp）（卸载）</a></li>
-<li><a href="#org13985f5">roswell</a></li>
+<li><a href="#org05cfb37">emacs-mac</a></li>
+<li><a href="#orgaffa232">sbcl（for Common Lisp）（卸载）</a></li>
+<li><a href="#org1d757ee">roswell</a></li>
+<li><a href="#orgcf59079">ripgrep</a></li>
+<li><a href="#orgb81059f">aria2</a></li>
+<li><a href="#orge316979">plantuml</a></li>
 </ul>
 </li>
-<li><a href="#org116b383">quicklisp</a></li>
-<li><a href="#org0eb8b34">roswell</a></li>
+<li><a href="#orge56b4e8">quicklisp</a></li>
+<li><a href="#org85f29f1">roswell</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9363782" class="outline-2">
-<h2 id="org9363782">概述</h2>
-<div class="outline-text-2" id="text-org9363782">
+<div id="outline-container-org5f5aff7" class="outline-2">
+<h2 id="org5f5aff7">概述</h2>
+<div class="outline-text-2" id="text-org5f5aff7">
 <p>
 虽然我很不喜欢苹果，但它质量过硬还是真的——无论硬件还是软件。
 </p>
 </div>
 </div>
-<div id="outline-container-org9666585" class="outline-2">
-<h2 id="org9666585">按键绑定</h2>
-<div class="outline-text-2" id="text-org9666585">
+<div id="outline-container-org8ea025a" class="outline-2">
+<h2 id="org8ea025a">按键绑定</h2>
+<div class="outline-text-2" id="text-org8ea025a">
 <p>
 众所周知，macOS的按键绑定很个性，当然也非常好用。
 macOS把ctrl和meta键的功能拆开混合了，其中复制粘贴、撤销重做被视作系统功能扔进了meta的管辖范畴，而ctrl则完全负责文本操作——这极大地降低了使用者罹患腱鞘炎的概率。
@@ -60,15 +63,15 @@ macOS把ctrl和meta键的功能拆开混合了，其中复制粘贴、撤销重�
 </p>
 </div>
 </div>
-<div id="outline-container-orgc3c4a7e" class="outline-2">
-<h2 id="orgc3c4a7e">续航</h2>
-<div class="outline-text-2" id="text-orgc3c4a7e">
+<div id="outline-container-org4a89eb8" class="outline-2">
+<h2 id="org4a89eb8">续航</h2>
+<div class="outline-text-2" id="text-org4a89eb8">
 <p>
 虽然macOS值得称道的地方很多，但是唯一一个让我能够下定决心使用macOS的原因只有一个——惊人的续航能力。请看下图：
 </p>
 
 
-<div id="org8ce1248" class="figure">
+<div id="orga1101de" class="figure">
 <p><img src="images/屏幕快照 2021-10-17 下午11.08.28.png" alt="屏幕快照 2021-10-17 下午11.08.28.png">
 </p>
 </div>
@@ -81,9 +84,9 @@ macOS把ctrl和meta键的功能拆开混合了，其中复制粘贴、撤销重�
 </p>
 </div>
 </div>
-<div id="outline-container-org3727bf4" class="outline-2">
-<h2 id="org3727bf4">外观</h2>
-<div class="outline-text-2" id="text-org3727bf4">
+<div id="outline-container-org037be15" class="outline-2">
+<h2 id="org037be15">外观</h2>
+<div class="outline-text-2" id="text-org037be15">
 <p>
 这真的没啥可说的，macOS的体验是出了名的美观。不过我发现了其中一些不一样的地方。
 直觉告诉我，macOS的桌面实现很简单——没错，就是简单。相比Windows和plasma，它简单很多。但是macOS把这份简单做得很优秀——流畅的动画和合理的布局使得它简单而不简陋。这是我很喜欢它的一个地方。
@@ -92,9 +95,9 @@ Mojave的动态壁纸做的也很不错，相比Windows上的Wallpaper Engine，
 </p>
 </div>
 </div>
-<div id="outline-container-org348fec7" class="outline-2">
-<h2 id="org348fec7">包管理</h2>
-<div class="outline-text-2" id="text-org348fec7">
+<div id="outline-container-org80e7fc6" class="outline-2">
+<h2 id="org80e7fc6">包管理</h2>
+<div class="outline-text-2" id="text-org80e7fc6">
 <p>
 这大概是我唯一想要吐槽的一点了——我想过homebrew可能是apt的样子，可能是pacman的样子，但我没想到，真正的homebrew竟然是portage（Gentoo包管理系统）的样子！
 分层级的软件包分类、tap添加第三方软件源、默认编译安装——这不就是个没有make.conf的portage嘛！！
@@ -106,7 +109,7 @@ Mojave的动态壁纸做的也很不错，相比Windows上的Wallpaper Engine，
 <li><p>
 要指定make时所用的CPU核心数，需要设置 HOMEBREW<sub>MAKE</sub><sub>JOBS</sub> 变量，如我在安装emacs-mac时使用的就是：
 </p>
-<div class="bash" id="orgada52d2">
+<div class="bash" id="orge46970e">
 <p>
 HOMEBREW<sub>MAKE</sub><sub>JOBS</sub>=4 brew install emacs-mac &#x2013;with-modules
 </p>
@@ -122,9 +125,9 @@ HOMEBREW<sub>MAKE</sub><sub>JOBS</sub>=4 brew install emacs-mac &#x2013;with-mod
 </p>
 </div>
 </div>
-<div id="outline-container-org5bb9643" class="outline-2">
-<h2 id="org5bb9643">安装fcpx</h2>
-<div class="outline-text-2" id="text-org5bb9643">
+<div id="outline-container-orge868880" class="outline-2">
+<h2 id="orge868880">安装fcpx</h2>
+<div class="outline-text-2" id="text-orge868880">
 <p>
 终于成功把fcpx装好啦！不知道传说中超级厉害的剪辑软件到底是什么样子的～
 </p>
@@ -136,11 +139,9 @@ HOMEBREW<sub>MAKE</sub><sub>JOBS</sub>=4 brew install emacs-mac &#x2013;with-mod
 <ol class="org-ol">
 <li>打开信任所有来源的应用，Sierra以上的版本就不支持在GUI下直接开启了，需要使用命令：</li>
 </ol>
-<div class="bash" id="org2e3e2c9">
-<p>
-sudo spctl &#x2013;master-disable
-</p>
-
+<div class="org-src-container">
+<pre class="src src-bash">sudo spctl --master-disable
+</pre>
 </div>
 <p>
 才能打开；
@@ -149,11 +150,9 @@ sudo spctl &#x2013;master-disable
 <ol class="org-ol">
 <li>Mac系统在启动时会校验软件，破解软件没有签名，是通不过校验的，需要用命令：</li>
 </ol>
-<div class="bash" id="org7504e66">
-<p>
-sudo xattr -d com.apple.quarantine /Applications/Final\ Cut\ Pro.app
-</p>
-
+<div class="org-src-container">
+<pre class="src src-bash">sudo xattr -d com.apple.quarantine /Applications/Final<span style="color: #86B187;">\ </span>Cut<span style="color: #86B187;">\ </span>Pro.app
+</pre>
 </div>
 <p>
 才可以正常使用。
@@ -164,43 +163,70 @@ sudo xattr -d com.apple.quarantine /Applications/Final\ Cut\ Pro.app
 </p>
 </div>
 </div>
-<div id="outline-container-org90df957" class="outline-2">
-<h2 id="org90df957">Mac软件包列表</h2>
-<div class="outline-text-2" id="text-org90df957">
+<div id="outline-container-orgb2ea1ac" class="outline-2">
+<h2 id="orgb2ea1ac">Mac软件包列表</h2>
+<div class="outline-text-2" id="text-orgb2ea1ac">
 </div>
-<div id="outline-container-orgb9a510e" class="outline-3">
-<h3 id="orgb9a510e">brew</h3>
-<div class="outline-text-3" id="text-orgb9a510e">
+<div id="outline-container-orgec7fb53" class="outline-3">
+<h3 id="orgec7fb53">brew</h3>
+<div class="outline-text-3" id="text-orgec7fb53">
 </div>
-<div id="outline-container-org7230119" class="outline-4">
-<h4 id="org7230119">emacs-mac</h4>
-<div class="outline-text-4" id="text-org7230119">
+<div id="outline-container-org05cfb37" class="outline-4">
+<h4 id="org05cfb37">emacs-mac</h4>
+<div class="outline-text-4" id="text-org05cfb37">
 <dl class="org-dl">
 <dt>安装命令</dt><dd>HOMEBREW<sub>MAKEJOBS</sub>=4 brew install emacs-mac &#x2013;with-modules &#x2013;with-natural-title-bar &#x2013;with-rsvg</dd>
 <dt>依赖</dt><dd>m4, autoconf, automake, ca-certificates, gmp, bdw-gc, libffi, libtool, libunistring, pkg-config, readline, guile, gettext, libidn2, libtasn1, nettle, p11-kit, openssl@1.1, libevent, libnghttp2, unbound, gnutls, libpng, freetype, fontconfig, pcre, gdbm, mpdecimal, sqlite, xz, python@3.9, glib, libpthread-stubs, xorgproto, libxau, libxdmcp, libxcb, libx11, libxext, libxrender, lzo, pixman, cairo, jpeg, libtiff, gdk-pixbuf, fribidi, gobject-introspection, graphite2, icu4c, harfbuzz, pango, librsvg, texinfo, jansson, libxml2</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org696ffb4" class="outline-4">
-<h4 id="org696ffb4">sbcl（for Common Lisp）（卸载）</h4>
-<div class="outline-text-4" id="text-org696ffb4">
+<div id="outline-container-orgaffa232" class="outline-4">
+<h4 id="orgaffa232">sbcl（for Common Lisp）（卸载）</h4>
+<div class="outline-text-4" id="text-orgaffa232">
 <dl class="org-dl">
 <dt>安装命令</dt><dd>brew install sbcl</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org13985f5" class="outline-4">
-<h4 id="org13985f5">roswell</h4>
-<div class="outline-text-4" id="text-org13985f5">
+<div id="outline-container-org1d757ee" class="outline-4">
+<h4 id="org1d757ee">roswell</h4>
+<div class="outline-text-4" id="text-org1d757ee">
 <dl class="org-dl">
 <dt>安装命令</dt><dd>brew install roswell</dd>
 </dl>
 </div>
 </div>
+<div id="outline-container-orgcf59079" class="outline-4">
+<h4 id="orgcf59079">ripgrep</h4>
+<div class="outline-text-4" id="text-orgcf59079">
+<dl class="org-dl">
+<dt>安装命令</dt><dd>brew install ripgrep</dd>
+<dt>依赖</dt><dd>pcre2</dd>
+</dl>
 </div>
-<div id="outline-container-org116b383" class="outline-3">
-<h3 id="org116b383">quicklisp</h3>
-<div class="outline-text-3" id="text-org116b383">
+</div>
+<div id="outline-container-orgb81059f" class="outline-4">
+<h4 id="orgb81059f">aria2</h4>
+<div class="outline-text-4" id="text-orgb81059f">
+<dl class="org-dl">
+<dt>安装命令</dt><dd>brew install aria2</dd>
+<dt>依赖</dt><dd>libssh2</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orge316979" class="outline-4">
+<h4 id="orge316979">plantuml</h4>
+<div class="outline-text-4" id="text-orge316979">
+<dl class="org-dl">
+<dt>安装命令</dt><dd>brew install plantuml</dd>
+<dt>依赖</dt><dd>giflib, webp, gd, python@3.9, jasper, netpbm, gts, harfbuzz, graphviz, openjdk</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-orge56b4e8" class="outline-3">
+<h3 id="orge56b4e8">quicklisp</h3>
+<div class="outline-text-3" id="text-orge56b4e8">
 <ul class="org-ul">
 <li>cl-fad</li>
 <li>trivial-file-size</li>
@@ -208,9 +234,9 @@ sudo xattr -d com.apple.quarantine /Applications/Final\ Cut\ Pro.app
 </ul>
 </div>
 </div>
-<div id="outline-container-org0eb8b34" class="outline-3">
-<h3 id="org0eb8b34">roswell</h3>
-<div class="outline-text-3" id="text-org0eb8b34">
+<div id="outline-container-org85f29f1" class="outline-3">
+<h3 id="org85f29f1">roswell</h3>
+<div class="outline-text-3" id="text-org85f29f1">
 <ul class="org-ul">
 <li>trivial-file-size</li>
 <li>osicat</li>
@@ -221,7 +247,7 @@ sudo xattr -d com.apple.quarantine /Applications/Final\ Cut\ Pro.app
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Rosario S.E.</p>
-<p class="date">Created: 2021-11-05 Fri 22:16</p>
+<p class="date">Created: 2021-11-21 Sun 01:30</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
